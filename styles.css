@@ -1,0 +1,92 @@
+@font-face {
+    font-family: Inter-Regular;
+    src: url(/assets/fonts/static/Inter-Regular.ttf);
+}
+
+:root {
+    --Green-color: hsl(75, 94%, 57%);
+    --White-color: hsl(0, 0%, 100%);
+    --Grey-color: hsl(0, 0%, 20%);
+    --DarkGrey-color: hsl(0, 0%, 12%);
+    --OffBlack-color: hsl(0, 0%, 8%);
+}
+
+html {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter-Regular, sans-serif;
+    background-color: var(--OffBlack-color);
+    color: var(--White-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+img{
+    width: 100%;
+}
+.card {
+    background-color: var(--DarkGrey-color);
+    margin: 120px 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 0 2rem;
+}
+.card__img{
+    text-align: center;
+    margin: 2rem 0;
+}
+.card__img > img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+.card__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+.card__link{
+    text-decoration: none;
+    color: var(--White-color);
+    font-weight: 700;
+    display: inline-block;
+    background-color: var(--Grey-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.card__link:active{
+    background-color: var(--Green-color);
+    color: var(--DarkGrey-color);
+}
+.card__info{
+    margin-bottom: 2rem;
+}
+.card__name{
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+.card__address{
+    line-height: 2.5;
+    font-weight: 600;
+    color: var(--Green-color);
+}
+
+@media screen and (min-width: 400px){
+
+    .card{
+       width: 384px;
+    }
+}
